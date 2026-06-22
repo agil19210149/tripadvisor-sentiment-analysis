@@ -51,35 +51,35 @@ st.set_page_config(
 # PATH FILE
 # =====================================================
 
-DATA_MENTAH = r"D:/apps/data/hotel_sulut.csv"
+DATA_MENTAH = r"data/hotel_sulut.csv"
 
-DATA_FINAL = r"D:/apps/data/hasil_analisis_final_bertopic.csv"
+DATA_FINAL = r"data/hasil_analisis_final_bertopic.csv"
 
-HASIL_MODEL = r"D:/apps/data/Hasil_Perbandingan_Model.csv"
+HASIL_MODEL = r"data/Hasil_Perbandingan_Model.csv"
 
-BERTOPIC = r"D:/apps/data/hasil_analisis_final_bertopic.csv"
+BERTOPIC = r"data/hasil_analisis_final_bertopic.csv"
 
-CASEFOLDING = r"D:/apps/data/Lampiran_1_CaseFolding_Filtering.csv"
+CASEFOLDING = r"data/Lampiran_1_CaseFolding_Filtering.csv"
 
-TOKEN = r"D:/apps/data/Lampiran_2_Tokenization.csv"
+TOKEN = r"data/Lampiran_2_Tokenization.csv"
 
-STEMMING = r"D:/apps/data/Lampiran_3_Stemming.csv"
+STEMMING = r"data/Lampiran_3_Stemming.csv"
 
 # =====================================================
 # FILE ALGORITMA
 # =====================================================
 
-CM_NB = r"D:/apps/data/06_Hasil_Analisis/confusion_matrix_Naive_Bayes.png"
+CM_NB = r"data/06_Hasil_Analisis/confusion_matrix_Naive_Bayes.png"
 
-CM_KNN = r"D:/apps/data/06_Hasil_Analisis/confusion_matrix_KNN.png"
+CM_KNN = r"data/06_Hasil_Analisis/confusion_matrix_KNN.png"
 
-CM_DT = r"D:/apps/data/06_Hasil_Analisis/confusion_matrix_Decision_Tree.png"
+CM_DT = r"data/06_Hasil_Analisis/confusion_matrix_Decision_Tree.png"
 
-REPORT_NB = r"D:/apps/data/06_Hasil_Analisis/classification_report_Naive_Bayes.csv"
+REPORT_NB = r"data/06_Hasil_Analisis/classification_report_Naive_Bayes.csv"
 
-REPORT_KNN = r"D:/apps/data/06_Hasil_Analisis/classification_report_KNN.csv"
+REPORT_KNN = r"data/06_Hasil_Analisis/classification_report_KNN.csv"
 
-REPORT_DT = r"D:/apps/data/06_Hasil_Analisis/classification_report_Decision_Tree.csv"
+REPORT_DT = r"data/06_Hasil_Analisis/classification_report_Decision_Tree.csv"
 
 # =====================================================
 # LOAD DATA
@@ -253,7 +253,7 @@ elif selected == "Dashboard Sentimen":
     with tab1:
 
         df_final = pd.read_csv(
-            r"D:\apps\data\06_FINALS\data_final_terlabel.csv"
+            r"data\06_FINALS\data_final_terlabel.csv"
         )
 
         data_awal = len(hotel)
@@ -433,7 +433,7 @@ elif selected == "Dashboard Sentimen":
             )
 
             df_mentah = pd.read_csv(
-                r"D:\apps\data\01_Data_Mentah\hotel_sulut.csv",
+                r"data\01_Data_Mentah\hotel_sulut.csv",
                 sep=";",
                 encoding="utf-8-sig",
                 on_bad_lines="skip"
@@ -457,7 +457,7 @@ elif selected == "Dashboard Sentimen":
             )
 
             df_final = pd.read_csv(
-                r"D:\apps\data\06_FINALS\data_final_terlabel.csv"
+                r"data\06_FINALS\data_final_terlabel.csv"
             )
 
             st.metric(
@@ -547,7 +547,7 @@ elif selected == "Dashboard Sentimen":
         )
 
         df_label = pd.read_csv(
-            r"D:\apps\data\06_FINALS\data_final_terlabel.csv"
+            r"data\06_FINALS\data_final_terlabel.csv"
         )
 
         st.dataframe(
@@ -567,7 +567,7 @@ elif selected == "Dashboard Sentimen":
         )
 
         df_label = pd.read_csv(
-            r"D:\apps\data\06_FINALS\data_final_terlabel.csv"
+            r"data\06_FINALS\data_final_terlabel.csv"
         )
 
         col1, col2, col3 = st.columns(3)
@@ -715,7 +715,7 @@ elif selected == "BERTopic":
 
     st.title("🧠 Analisis Topik BERTopic")
 
-    folder = r"D:/apps/data/06_Hasil_Analisis"
+    folder = r"data/06_Hasil_Analisis"
 
     def tampilkan_html(path_file, tinggi=800):
 
@@ -1077,14 +1077,14 @@ elif selected == "Perbandingan Algoritma":
     with tab3:
 
         st.image(
-            r"D:\apps\data\03_Hasil_Analisis\wordcloud_positif.png",
+            r"data\03_Hasil_Analisis\wordcloud_positif.png",
             use_container_width=True
         )
 
         st.divider()
 
         st.image(
-            r"D:\apps\data\03_Hasil_Analisis\wordcloud_negatif.png",
+            r"data\03_Hasil_Analisis\wordcloud_negatif.png",
             use_container_width=True
         )
 
@@ -1257,7 +1257,7 @@ elif selected == "Perbandingan Algoritma":
         )
 
         st.image(
-            r"D:\apps\data\03_Hasil_Analisis\grafik_akurasi.png",
+            r"data\03_Hasil_Analisis\grafik_akurasi.png",
             use_container_width=True
         )
 
@@ -1268,7 +1268,7 @@ elif selected == "Perbandingan Algoritma":
         )
 
         st.image(
-            r"D:\apps\data\03_Hasil_Analisis\f1_score_per_kelas.png",
+            r"data\03_Hasil_Analisis\f1_score_per_kelas.png",
             use_container_width=True
         )
 

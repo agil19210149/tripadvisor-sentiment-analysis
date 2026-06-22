@@ -735,12 +735,8 @@ elif selected == "BERTopic":
 
             st.error(f"Gagal membuka file: {e}")
 
-    tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
+    tab1, tab2, tab3, tab4 = st.tabs([
         "📊 Topik Dominan",
-        "🏆 Topik Teratas",
-        "🗺️ Peta Jarak",
-        "🔥 Heatmap",
-        "🌳 Hierarki",
         "⚠️ Pain Points",
         "💪 Strengths",
         "📈 Sentimen per Topik"
@@ -782,78 +778,10 @@ elif selected == "BERTopic":
         st.pyplot(fig)
 
     # =================================================
-    # TOPIK TERATAS
-    # =================================================
-
-    with tab2:
-
-        st.subheader("Visualisasi Topik Teratas")
-
-        tampilkan_html(
-            rf"{folder}/topik_teratas.html",
-            tinggi=900
-        )
-
-    # =================================================
-    # PETA JARAK TOPIK
-    # =================================================
-
-    with tab3:
-
-        st.subheader("Intertopic Distance Map")
-
-        tampilkan_html(
-            rf"{folder}/peta_jarak_topik.html",
-            tinggi=950
-        )
-
-    # =================================================
-    # HEATMAP TOPIK
-    # =================================================
-    with tab4:
-        
-        st.subheader("Heatmap Similarity Matrix")
-
-        tampilkan_html(
-            rf"{folder}/heatmap_topik.html",
-            tinggi=950
-        )
-
-        st.image(
-            rf"{folder}/similarity_matrix_final.png",
-            use_container_width=True
-        )
-
-        st.info(
-            """
-            Similarity Matrix digunakan untuk melihat tingkat kemiripan
-            antar topik yang dihasilkan oleh model BERTopic.
-
-            Semakin tinggi nilai similarity maka semakin dekat hubungan
-            antar topik tersebut. Sebaliknya, nilai similarity yang rendah
-            menunjukkan bahwa topik berhasil dipisahkan dengan baik dan
-            merepresentasikan aspek layanan yang berbeda.
-            """
-        )
-    # =================================================
-    # HIERARKI TOPIK
-    # =================================================
-
-    with tab5:
-
-        st.subheader("🌳 Hierarki Topik")
-
-        tampilkan_html(
-            rf"{folder}/hierarki_topik.html",
-            tinggi=900
-        )
-
-
-    # =================================================
     # PAIN POINTS
     # =================================================
 
-    with tab6:
+    with tab2:
 
         st.subheader("Pain Points Pelanggan")
 
@@ -871,7 +799,7 @@ elif selected == "BERTopic":
     # STRENGTHS
     # =================================================
 
-    with tab7:
+    with tab3:
 
         st.subheader("Strengths Hotel")
 
@@ -885,7 +813,7 @@ elif selected == "BERTopic":
             use_container_width=True
         )
 
-        with tab8:
+        with tab4:
 
             st.subheader(
                 "Distribusi Sentimen pada Setiap Topik"

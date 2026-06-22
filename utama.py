@@ -46,7 +46,77 @@ st.set_page_config(
     page_icon="🏨",
     layout="wide"
 )
+# =====================================================
+# PATH FILE
+# =====================================================
 
+DATA_MENTAH = r"data/hotel_sulut.csv"
+
+DATA_FINAL = r"data/hasil_analisis_final_bertopic.csv"
+
+HASIL_MODEL = r"data/Hasil_Perbandingan_Model.csv"
+
+BERTOPIC = r"data/hasil_analisis_final_bertopic.csv"
+
+CASEFOLDING = r"data/Lampiran_1_CaseFolding_Filtering.csv"
+
+TOKEN = r"data/Lampiran_2_Tokenization.csv"
+
+STEMMING = r"data/Lampiran_3_Stemming.csv"
+
+# =====================================================
+# FILE ALGORITMA
+# =====================================================
+
+CM_NB = r"data/06_Hasil_Analisis/confusion_matrix_Naive_Bayes.png"
+
+CM_KNN = r"data/06_Hasil_Analisis/confusion_matrix_KNN.png"
+
+CM_DT = r"data/06_Hasil_Analisis/confusion_matrix_Decision_Tree.png"
+
+REPORT_NB = r"data/06_Hasil_Analisis/classification_report_Naive_Bayes.csv"
+
+REPORT_KNN = r"data/06_Hasil_Analisis/classification_report_KNN.csv"
+
+REPORT_DT = r"data/06_Hasil_Analisis/classification_report_Decision_Tree.csv"
+
+# =====================================================
+# LOAD DATA
+# =====================================================
+
+@st.cache_data
+def load_data():
+    return pd.read_csv(DATA_FINAL)
+
+@st.cache_data
+def load_hotel():
+
+    try:
+
+        df = pd.read_csv(
+            DATA_MENTAH,
+            sep=";",
+            encoding="utf-8-sig",
+            on_bad_lines="skip"
+        )
+
+    except:
+
+        df = pd.read_csv(
+            DATA_MENTAH,
+            engine="python",
+            on_bad_lines="skip"
+        )
+
+    return df
+
+@st.cache_data
+def load_model():
+    return pd.read_csv(HASIL_MODEL)
+
+@st.cache_data
+def load_topic():
+    return pd.read_csv(BERTOPIC)
 
 
 # =====================================================

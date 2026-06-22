@@ -253,7 +253,7 @@ elif selected == "Dashboard Sentimen":
     with tab1:
 
         df_final = pd.read_csv(
-            r"data\06_FINALS\data_final_terlabel.csv"
+            r"data/06_FINALS/data_final_terlabel.csv"
         )
 
         data_awal = len(hotel)
@@ -433,7 +433,7 @@ elif selected == "Dashboard Sentimen":
             )
 
             df_mentah = pd.read_csv(
-                r"data\01_Data_Mentah\hotel_sulut.csv",
+                r"data/01_Data_Mentah/hotel_sulut.csv",
                 sep=";",
                 encoding="utf-8-sig",
                 on_bad_lines="skip"
@@ -457,7 +457,7 @@ elif selected == "Dashboard Sentimen":
             )
 
             df_final = pd.read_csv(
-                r"data\06_FINALS\data_final_terlabel.csv"
+                r"data/06_FINALS/data_final_terlabel.csv"
             )
 
             st.metric(
@@ -547,7 +547,7 @@ elif selected == "Dashboard Sentimen":
         )
 
         df_label = pd.read_csv(
-            r"data\06_FINALS\data_final_terlabel.csv"
+            r"data/06_FINALS/data_final_terlabel.csv"
         )
 
         st.dataframe(
@@ -567,7 +567,7 @@ elif selected == "Dashboard Sentimen":
         )
 
         df_label = pd.read_csv(
-            r"data\06_FINALS\data_final_terlabel.csv"
+            r"data/06_FINALS/data_final_terlabel.csv"
         )
 
         col1, col2, col3 = st.columns(3)
@@ -1077,14 +1077,14 @@ elif selected == "Perbandingan Algoritma":
     with tab3:
 
         st.image(
-            r"data\03_Hasil_Analisis\wordcloud_positif.png",
+            r"data/03_Hasil_Analisis/wordcloud_positif.png",
             use_container_width=True
         )
 
         st.divider()
 
         st.image(
-            r"data\03_Hasil_Analisis\wordcloud_negatif.png",
+            r"data/03_Hasil_Analisis/wordcloud_negatif.png",
             use_container_width=True
         )
 
@@ -1257,7 +1257,7 @@ elif selected == "Perbandingan Algoritma":
         )
 
         st.image(
-            r"data\03_Hasil_Analisis\grafik_akurasi.png",
+            r"data/03_Hasil_Analisis/grafik_akurasi.png",
             use_container_width=True
         )
 
@@ -1268,7 +1268,7 @@ elif selected == "Perbandingan Algoritma":
         )
 
         st.image(
-            r"data\03_Hasil_Analisis\f1_score_per_kelas.png",
+            r"data/03_Hasil_Analisis/f1_score_per_kelas.png",
             use_container_width=True
         )
 

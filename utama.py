@@ -50,19 +50,19 @@ st.set_page_config(
 # PATH FILE
 # =====================================================
 
-DATA_MENTAH = r"data/hotel_sulut.csv"
+DATA_MENTAH = r"data/01_Data_Mentah/hotel_sulut.csv"
 
-DATA_FINAL = r"data/hasil_analisis_final_bertopic.csv"
+DATA_FINAL = r"data/06_Hasil_Analisis/hasil_analisis_final_bertopic.csv"
 
-HASIL_MODEL = r"data/Hasil_Perbandingan_Model.csv"
+HASIL_MODEL = r"data/06_FINALS/Hasil_Perbandingan_Model.csv"
 
-BERTOPIC = r"data/hasil_analisis_final_bertopic.csv"
+BERTOPIC = r"data/06_Hasil_Analisis/hasil_analisis_final_bertopic.csv"
 
-CASEFOLDING = r"data/Lampiran_1_CaseFolding_Filtering.csv"
+CASEFOLDING = r"data/06_FINALS/Lampiran_1_CaseFolding_Filtering.csv"
 
-TOKEN = r"data/Lampiran_2_Tokenization.csv"
+TOKEN = r"data/06_FINALS/Lampiran_2_Tokenization.csv"
 
-STEMMING = r"data/Lampiran_3_Stemming.csv"
+STEMMING = r"data/06_FINALS/Lampiran_3_Stemming.csv"
 
 # =====================================================
 # FILE ALGORITMA
